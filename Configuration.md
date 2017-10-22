@@ -16,8 +16,8 @@ const appRoutes: Routes = [
   },
   { path: '**', component: PageNotFoundComponent }
 ];
-
 ```
+
 Pass it to the RouterModule.forRoot method in the module imports to configure the router.
 ```bash
 #@NgModule({
