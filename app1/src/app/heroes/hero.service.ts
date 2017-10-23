@@ -18,7 +18,7 @@ private _heroUrl ='./api/heros.json';
 
   getHeroes(): Observable<IHero[]> {
     return this._http.get<IHero[]>(this._heroUrl)
-        .do(data => console.log('All: ' + JSON.stringify(data)))
+        //.do(data => console.log('All: ' + JSON.stringify(data)))
         .catch(this.handleError);
 }
 getHero(id: number | string) {
