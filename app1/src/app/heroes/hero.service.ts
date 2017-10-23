@@ -21,6 +21,12 @@ private _heroUrl ='./api/heros.json';
         .do(data => console.log('All: ' + JSON.stringify(data)))
         .catch(this.handleError);
 }
+getHero(id: number | string) {
+  return this.getHeroes()
+    // (+) before `id` turns the string into a number
+    .map(heroes => heroes.find(hero => hero.id === +id));
+}
+
 private handleError(err: HttpErrorResponse) {
   let errorMessage = '';
   if (err.error instanceof Error) {

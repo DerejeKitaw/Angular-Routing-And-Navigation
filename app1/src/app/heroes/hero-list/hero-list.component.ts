@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from '../hero.service';
 import { IHero } from '../hero';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-hero-list',
@@ -9,7 +10,8 @@ import { IHero } from '../hero';
 })
 export class HeroListComponent implements OnInit {
   heroes:IHero[];
-  constructor( private _heroService :HeroService )  {
+  constructor( private _heroService :HeroService, 
+    private route: ActivatedRoute)  {
     
  }
 
