@@ -1,0 +1,14 @@
+<p>
+  hero-list works!
+</p>
+<h2>HEROES</h2>
+<ul class="items">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero.id === selectedId">
+    <!-- <a [routerLink]="['/hero', hero.id]">
+      <span class="badge">{{ hero.id }}</span>{{ hero.name }}
+    </a> -->
+    <span class="badge">{{ hero.id }}</span>{{ hero.name }}
+
+  </li>
+</ul>
